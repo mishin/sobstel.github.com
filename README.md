@@ -1,4 +1,2 @@
-sobstel.github.com
+http://sobstel.org
 ==================
-
-sobstel.org

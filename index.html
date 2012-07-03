@@ -2,48 +2,236 @@
 <html lang="en"> 
 <head> 
   <meta charset="utf-8"/> 
-  <title>Przemek Sobstel</title>
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-  <style>
-    body { font-size: 12px; }
-    h1 { font-size: 1.6em; font-weight: bold; }
-    #content { font-family: 'PT Serif', serif; }
-    #content { margin: 30px auto 20px; width: 200px; }
-    #content p { margin : 0.4em 0 }
-    #content p, #content a { font-size: 1.1em; color: #333; text-decoration: none } 
-    #content p.version { margin-bottom: 1.5em; }
-    #content p.contact { margin-top: 1.5em; }
-    #content a:hover { color: #666;  }  
-  </style> 
+  <title>sobstel.org / Przemek Sobstel</title>
+  <style type="text/css">
+body {
+  background: #fff; 
+  font: normal 20px/1.5 Hoefler Text, bodyfont, serif;
+  color: #333;
+}
+h1, h2, h3 { font: normal 1em Helvetica, sans-serif; color: #333; }
+h2, h3 { font-weight: bold; }
+h1 {
+  font-size: 1.4em;
+  padding: 20px 0px 20px 50px;
+  margin-left: -50px;
+  background: url('assets/me.jpg') no-repeat left 15px;
+}
+h2 {
+  font-size: 1.2em; 
+  padding: 15px 0px 5px 48px;
+  margin-left: -48px;
+  background-repeat: no-repeat;
+  background-position: left 10px;
+}
+h3 {
+  font-size: 1.1em;
+  padding: 10px 0px 0px 0px;
+}
+blockquote {
+  border-left: 1px solid #A5ABAB;
+  margin:0px;
+  padding:0 12px 0 12px;
+}
+p {
+  margin: 1em auto;
+}
+a { 
+  text-decoration: none; 
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+h1 a, #footer a { border-bottom: none; }
+
+a:visited {
+  color: #555;
+  border-bottom-color: #555;
+}
+a:hover { 
+  color: #777;
+  border-bottom-color: #777;
+}
+
+ul { padding: 0em 0em 1em 1em; }
+ol{ padding: 0em 0em 1em 1em; }
+li { line-height: 30px; padding: 6px 0 0 0; }
+
+
+#content {
+  min-width: 20em;
+  max-width: 30em;
+  margin: 20px auto;
+  padding: 0 0 0 50px;
+  overflow: hidden;
+}
+
+#footer {
+  margin: 3em 0 1em;
+  font-size: 0.7em;
+}
+
+#tech h2 { background-image: url('assets/icons/monitor.png'); }
+
+#logs h2 { background-image: url('assets/icons/pencil.png'); }
+
+#open-source h2 { background-image: url('assets/icons/lightbulb.png'); }
+
+#net h2 { background-image: url('assets/icons/webcam.png'); }
+#net ul,
+#open-source ul {
+  padding-left: 0;
+}
+#net ul li,
+#open-source ul li {
+  list-style-type: none;
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+#net ul li.github,
+#open-source ul li.github { background-image: url('assets/logos/github.png'); margin-left: -2px; padding-left: 37px; }
+#net ul li.ohloh { background-image: url('assets/logos/ohloh.png'); }
+#net ul li.segfaultlabs { background-image: url('assets/logos/segfaultlabs.png'); }
+#net ul li.linkedin { background-image: url('assets/logos/linkedin.png'); }
+
+#work h2 { background-image: url('assets/icons/briefcase.png'); }
+#work p {
+  padding-right: 220px;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+#work p.intro { padding-right: 0; }
+#work p.perform { background-image: url('assets/logos/perform.gif'); }
+#work p.gsm { background-image: url('assets/logos/gsm.jpg'); }
+#work p.soccerway { background-image: url('assets/logos/soccerway.png'); }
+#work p.scoresway { background-image: url('assets/logos/scoresway.png'); }
+
+#boasts h2 { background-image: url('assets/icons/photo.png'); }
+
+
+
+.entry a:link {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
+.entry a:visited {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
+.entry a:hover {color: #999; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0; text-decoration: none;}
+.entry strong{font-family: Georgia, "Times New Roman", Times, serif; font-weight: bold; color: #555555;}
+
+#arc {float: right; width:530px; overflow: hidden; margin-top:0px; margin-left:14px; margin-right:14px; margin-bottom:24px;}  
+.arc p{color:#666; font-family: 'Verdana, sans-serif; font-size: 12px; font-weight: normal !important;}
+
+.year th{color:#666; font-family: Verdana, sans-serif; font-size: 22px; font-weight: bold;}
+.arctitle {color:#666; font-family: 'Verdana, sans-serif; font-size: 12px; font-weight: normal;}
+.arctitle th {color:#999; font-family: 'Verdana, sans-serif; font-size: 14px; font-weight: normal;}
+.arc2 {color:#999; font-family: 'Helvetica, sans-serif; font-size: 12px; font-weight: normal !important;}
+.arc2 th {color:#999; font-family: 'Helvetica, sans-serif; font-size: 12px; font-weight: normal !important;}
+
+</style> 
   <link rel="shortcut icon" href="favicon.png"/>
-</head> 
-<body> 
+</head>
+<body>
 <div id="content">
-  <h1>Przemek Sobstel</h1>
-  <p class="version">
-    ver. 2.9p280
+  <h1><a href="/">sobstel.org</a> / <strong>Przemek Sobstel</strong></h1>
+  <p>
+  Aspiring <a href="http://manifesto.softwarecraftsmanship.org/">software craftsman</a>, <a href="http://programming-motherfucker.com/">speaks programming</a>.
+</p>
+
+<div id="tech">
+  <h2>interests</h2>
+  <p>
+    Anything that makes web applications flying, including - but not limited to - 
+    ajax, akamai, apache, apis, 
+    bash, 
+    css, <em>common sense</em>, 
+    design patterns, 
+    git, 
+    html, 
+    <strong>javascript</strong>, jquery, json, 
+    linux, 
+    mac os x, memcached, mongodb, mysql, 
+    nginx, nosql, 
+    <strong>php</strong>, phpunit, prototype.js,
+    <!-- rabbitmq, --> rails, <!-- redis, --> <strong>ruby</strong>,
+    sql, symfony, 
+    tdd, 
+    web services, 
+    etc.
   </p>
-  <p> 
-  <a href="http://logs.sobstel.org/">logs</a> 
-  <a href="http://github.com/sobstel/">github</a> 
-  <a href="https://gist.github.com/sobstel/">gist</a> 
-  <a href="http://segfaultlabs.com/">segfaultlabs</a>
-  <a href="http://www.ohloh.net/accounts/sobstel">ohloh</a>
-  <a href="http://www.linkedin.com/profile/view?id=9007954">linkedin</a>
-  <a href="http://www.zend.com/en/store/education/certification/authenticate.php/ClientCandidateID/ZEND005043/RegistrationID/219445502">zend certified</a>
-</p>
-<p>
-  <a href="http://www.soccerway.com/">soccerway</a>
-  <a href="http://www.scoresway.com/">scoresway</a>
-  <a href="http://www.globalsportsmedia.com/">globalsportsmedia</a>
-  <a href="http://www.performgroup.co.uk/">performgroup</a>
-</p>
-<p>
-  <a href="http://www.grupaoak.pl/">oakgroup</a>
-</p>
-<p class="contact">
-  przemek&#64;sobstel.org
-</p>
+</div>
+
+<div id="logs">
+  <h2>logs</h2>
+  <ul>
+    <li><a href="http://logs.sobstel.org/post/22959646208/doctrine-common-cache-cacheprovider-performance-aware">Doctrine2 performance-aware CacheProvider adapter</a></li>
+    <li><a href="http://logs.sobstel.org/post/22314471501/mysql-blob-vs-text">MySQL: BLOB vs TEXT</a></li>
+    <li><a href="http://logs.sobstel.org/post/21396574099/php-call-to-undefined-method-on-tr-tr-locale">PHP: Call to undefined method on tr_TR locale</a></li>
+    <li><a href="http://logs.sobstel.org/post/16840019171/sublime-text-2-sync-project-side-bar-with-active-file">Sublime Text 2: sync project side bar with active file</a></li>
+    <li><a href="http://logs.sobstel.org/post/15624233120/internet-explorer-under-linux-or-mac-os-x">Internet Explorer under Linux or Mac OS X</a></li>
+    <li><a href="http://logs.sobstel.org/post/14685730093/javascript-lazy-loading-with-dependencies">Javascript lazy loading with dependencies</a></li>
+    <li><a href="http://logs.sobstel.org/post/12840132792/call-class-method-via-instance-in-ruby">Call class method via instance in Ruby</a></li>
+    <li><a href="http://logs.sobstel.org/post/12750165627/css-image">CSS image</a></li>
+    <li><a href="http://logs.sobstel.org/post/11915307388/codility-sample-demo-test">Codility sample demo test</a></li>
+    <li><a href="http://logs.sobstel.org/post/10778932112/devise-find-by-username-or-e-mail">Devise: find by username OR e-mail</a></li>
+    <li>more at <a href="http://logs.sobstel.org/">logs.sobstel.org</a> ...</li>
+  </ul>
+  
+</div>
+
+<div id="open-source">
+  <h2>open source</h2>
+  <ul>
+    <li class="github"><a href="http://github.com/sobstel/">github</a></li>
+  </ul>
+</div>
+
+<div id="net">
+  <h2>on the net</h2>
+  <ul> 
+    <li class="github"><a href="http://github.com/sobstel/">github</a> &amp; <a href="https://gist.github.com/sobstel/">gist</a></li>
+    <li class="ohloh"><a href="http://www.ohloh.net/accounts/sobstel">ohloh</a></li>
+    <li class="linkedin"><a href="http://www.linkedin.com/profile/view?id=9007954">linkedin</a></li>
+    <li class="segfaultlabs"><a href="http://segfaultlabs.com/">segfaultlabs</a></li>
+  </ul>
+</div>
+
+<div id="work">
+  <h2>professional work</h2>
+  <p class="intro">
+    On a contract with <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> as leading software engineer.
+  </p>
+  <p class="perform">
+    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> is the Sports Information Division of the <a href="http://www.performgroup.co.uk/">PERFORM Group</a> - the world leader at broadcasting and&nbsp;commercializing sport in digital media.
+  </p>
+  <p class="gsm">
+    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> syndicates live and historic sports data and statistics through a&nbsp;variety of products and services along with&nbsp;managing its own brands.
+  </p>
+  <p class="soccerway">
+    <a href="http://www.soccerway.com/">soccerway.com</a> provides live scores, fixtures and&nbsp;statistics for 700+ competitions.<br/> With over 21 million unique users a year it's one of the biggest soccer sites on the planet.
+  </p>
+  <p class="scoresway">
+    <a href="http://www.scoresway.com/">scoresway.com</a> provides live scores, fixtures and&nbsp;statistics across 9 sports and 1500+ competitions.
+  </p>
 </div> 
+
+
+<div id="boasts">
+  <h2>boasts</h2>
+  <p><a href="http://www.zend.com/en/store/education/certification/authenticate.php/ClientCandidateID/ZEND005043/RegistrationID/219445502">Zend Certified Engineer</a> certificate, which encompasses curriculum that is essential to demonstrate expert proficiency in PHP and programming for web in general from a practical perspective.</p>
+  <p>1st in <a href="http://php.pl/">php.pl</a>'s <a href="http://wortal.php.pl/phppl/Wortal/Aktualnosci/Spolecznosc/Konkurs-Pozyteczne-i-praktyczne-biblioteki-Wyniki">Useful and practical libraries</a> contest for scSession library.</p>
+  <p>1st in <a href="http://php.pl/">php.pl</a>'s <a href="http://wortal.php.pl/phppl/Wortal/Aktualnosci/Wydarzenia/Konkursy/Doceniamy-publicystow-wyniki">We value authors</a> contest for article about session security.</p>
+</div>
+
+  <p id="footer">
+    przemek&#64;sobstel.org :: ver. 2.9p289 :: hardly any rights reserved :: icons by <a href="http://dryicons.com">dryicons</a> 
+  </p>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-731001-15']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</div>
 </body> 
 </html>

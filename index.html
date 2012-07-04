@@ -22,11 +22,7 @@ h2 {
   padding: 15px 0px 5px 48px;
   margin-left: -48px;
   background-repeat: no-repeat;
-  background-position: left 10px;
-}
-h3 {
-  font-size: 1.1em;
-  padding: 10px 0px 0px 0px;
+  background-position: left 11px;
 }
 blockquote {
   border-left: 1px solid #A5ABAB;
@@ -75,21 +71,18 @@ li { line-height: 30px; padding: 6px 0 0 0; }
 #logs h2 { background-image: url('assets/icons/pencil.png'); }
 
 #open-source h2 { background-image: url('assets/icons/lightbulb.png'); }
+#open-source h3 { font-size: 0.8em; padding: 0; }
+#open-source h3 a { font-size: 1.2em; }
 
 #net h2 { background-image: url('assets/icons/webcam.png'); }
-#net ul,
-#open-source ul {
-  padding-left: 0;
-}
-#net ul li,
-#open-source ul li {
+#net ul { padding-left: 0; }
+#net ul li {
   list-style-type: none;
   padding-left: 35px;
   background-repeat: no-repeat;
   background-position: center left;
 }
-#net ul li.github,
-#open-source ul li.github { background-image: url('assets/logos/github.png'); margin-left: -2px; padding-left: 37px; }
+#net ul li.github { background-image: url('assets/logos/github.png'); margin-left: -2px; padding-left: 37px; }
 #net ul li.ohloh { background-image: url('assets/logos/ohloh.png'); }
 #net ul li.segfaultlabs { background-image: url('assets/logos/segfaultlabs.png'); }
 #net ul li.linkedin { background-image: url('assets/logos/linkedin.png'); }
@@ -177,9 +170,33 @@ li { line-height: 30px; padding: 6px 0 0 0; }
 
 <div id="open-source">
   <h2>open source</h2>
-  <ul>
-    <li class="github"><a href="http://github.com/sobstel/">github</a></li>
-  </ul>
+  <h3><a href="https://github.com/gsmlabs/LSDCache">LSDCache</a> (PHP)</h3>
+  <p>
+    Slam defence, prevents dogpile effect (aka clobbering updates, stampending requests).
+  </p>
+  <h3><a href="https://github.com/sobstel/Execution">Execution</a> (PHP)</h3>
+  <p>
+    PHP class to handle theoretically unrecoverable fatal errors.
+  </p>
+  <h3><a href="https://github.com/sobstel/scru.js">scru.js</a> (JavaScript)</h3>
+  <p>
+    Lightweight execution dependency manager (perfect for lazy loading with dependencies).
+  </p>
+  <h3><a href="https://github.com/sobstel/sesshin">sesshin</a> (PHP)</h3>
+  <p>
+    Advanced session manager written with security in mind.
+  </p>
+  <h3><a href="https://github.com/sobstel/Imaged">Imaged</a> (PHP)</h3>
+  <p>
+    Image mainpulation - object-oriented wrapper for PHP GD2 library.
+  </p>
+  <h3><a href="https://github.com/sobstel/shed">shed</a> (PHP)</h3>
+  <p>
+    Dependency Injection container.
+  </p>
+  <p>
+    More at <a href="http://github.com/sobstel/">github</a> ....</li>
+  </p>
 </div>
 
 <div id="net">
@@ -198,10 +215,11 @@ li { line-height: 30px; padding: 6px 0 0 0; }
     On a contract with <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> as leading software engineer.
   </p>
   <p class="perform">
-    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> is the Sports Information Division of the <a href="http://www.performgroup.co.uk/">PERFORM Group</a> - the world leader at broadcasting and&nbsp;commercializing sport in digital media.
+
+    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> is the sports information division of the <a href="http://www.performgroup.co.uk/">PERFORM Group</a> - the world leader at broadcasting and&nbsp;commercializing sport in digital media.
   </p>
   <p class="gsm">
-    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> syndicates live and historic sports data and statistics through a&nbsp;variety of products and services along with&nbsp;managing its own brands.
+    <a href="http://www.globalsportsmedia.com/">Global Sports Media</a> is a leading provider of real time and post produced digital sports information to the international sport publisher, bookmaker, media and mobile industries.
   </p>
   <p class="soccerway">
     <a href="http://www.soccerway.com/">soccerway.com</a> provides live scores, fixtures and&nbsp;statistics for 700+ competitions.<br/> With over 21 million unique users a year it's one of the biggest soccer sites on the planet.
@@ -220,7 +238,7 @@ li { line-height: 30px; padding: 6px 0 0 0; }
 </div>
 
   <p id="footer">
-    przemek&#64;sobstel.org :: ver. 2.9p289 :: hardly any rights reserved :: icons by <a href="http://dryicons.com">dryicons</a> 
+    przemek&#64;sobstel.org :: ver. 2.9p290 :: hardly any rights reserved :: icons by <a href="http://dryicons.com">dryicons</a> 
   </p>
   <script type="text/javascript">
   var _gaq = _gaq || [];
